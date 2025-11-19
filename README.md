@@ -1,4 +1,4 @@
-# Sediment_Shape_Evolution
+# Sediment Shape Evolution
 This repository contains all the code used to perform the analysis presented in our paper on modelling the evolution of sediment shape in the Sarzana Stream, submitted to the Journal of Geophysical Research: Earth Surface.
 All colde are written in MATLAB and require the 'Signal Processing Toolbox' and the 'Statistics and Machine Learning Toolbox'.
 ## Repository structure
