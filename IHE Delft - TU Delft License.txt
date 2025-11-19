@@ -1,0 +1,15 @@
+IHE Delft - TU Delft License
+
+Copyright (c) 2025 ACattapan
+
+The following applies to the code published in this repository and associated subfolders
+The code (the "Software") is provided to you by the author, Alessandro Cattapan, for academic, research, and non-commercial purposes only, unless otherwise expressly stated. 
+"AS IS" Provision and No Warranty
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. The author, IHE Delft, and TU Delft make no representations or warranties regarding the accuracy, completeness, or performance of the Software. The entire risk as to the quality and performance of the Software is with you. 
+Limitation of Liability
+IN NO EVENT SHALL THE AUTHOR, COPYRIGHT HOLDERS, OR IHE Delft, and TU Delft BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THE SOFTWARE, even if advised of the possibility of such damage. 
+No Obligation for Support
+The authors have no obligation to provide maintenance, support, updates, enhancements, or modifications to the Software. 
+Appropriate Use and Acknowledgment
+Any results or publications derived from the use of this Software should appropriately credit the source and the original authors. Users are responsible for ensuring their use of the Software complies with all applicable laws and ethical standards, particularly concerning data privacy and human participants, if applicable. 
+By using the Software, you agree to these terms.
