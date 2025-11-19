@@ -1,0 +1,37 @@
+This document describes how to produce Figure 7 and S3 of the paper submitted to the Journal of Geophysical Research: Earth Surface.
+
+The file Main_Code.m defines all inputs, links to folders where subfunctions are stored, and controls which analysis is performed.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Lithology 		controls which rock type is used for the analysis.
+HillsNetw_Flag 		controls whether source areas are identified by the areas of the outcrops in the geological map (H for Hillslope), or by their intersection with the drainage 				network (N for Network).
+Parameter 		controls which sediment shape parameter to use to establish a relationship with travel distance based on the proposed model.
+Distance_Metric 	controls how distances are defined: SourceDist means that distances are computed along the steepest descent from the source area sampled and different sampling locations. In contrast, TravDist means that distances are calculated as average distances (along the steepest descent) from each pixel in the contributing source areas and the different sampling locations.
+
+DistanceWeigthing 	defines whether distances from multiple source areas are weighted using an exponential distribution, as described in the paper, or not.
+INPUT_DATASET_2025.xlsx is the main input file containing sediment shape descriptors, sampling locations identifiers, Lithology, and origin type.
+*_PATHS.xlsx 		files define the set of sampling locations constituting different sediment paths, based on the drainage network topology. Each path starts with a sampled source location 		and continues downstream along the steepest descent.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The section MODEL PARAMETERS SET-UP defines the values of model parameters used for the calibration of the model. If a certain parameter is given a single scalar value, this will be considered constant.
+
+Distance_Units 		defines the unit in which distances are stored within the input rasters.
+
+The model can fit sediment shape parameters in order to perform a stochastic sampling and run in a probabilistic fashion. This is controlled by the Fitting_Param, which can assume the values "Y" for yes or "N" for no.
+
+CLowerC0 		controls whether particles with circularity lower than C0 will be discarded or not. This was a test performed during the model development, which was not used; therefore, 		it should be kept to "N".
+Detect_Thresh 		defines the smallest intermediate particle size in millimetres considered by the model. A value of 7 mm was used to avoid considering particles whose perimeter was composed 		by too few pixels to achieve an accurate shape estimation.
+Plotting_flag 		controls whether the code will plot results or not.
+Plot_Type 		controls the format for the plots in terms of probability density function (pdf) or cumulative density function (cdf).
+Form			defines the format of the rasters storing distance data.
+FitTest			defines the statistical test used to assess equality of distributions: "KS" or "AD" for Kolmogorov-Smirnov and Anderson-Darling respectively.
+alpha			significance level.
+Quantiles_Used		Quantiles used in the discretization of the shape parameters distribution, in %, meaning provide integer values.
+Run_TD_Model		Flag to decide whether the model to estimate sediment shape based on their Travel Distance should be run or not.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In order to reproduce the figure 7 presented in the paper, the model Circularity_Fit_Model_fixed_C0_Distances_Samples should be run by uncommenting the associated line (236). The indication "fixed_C0" refers to the fact that, in this model, values of C0 are not allowed to vary based on the set previously defined, but they are considered constant and equal to the respective quantiles obtained sampling the source area. This model performs the error minimization described in the paper and produces the figure showing the point representing set of optimum model parameters (Figure S3).
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+If results need to be loaded, the user should uncomment the associated lined in the section LOAD RESULTS PRODUCED BY THE OPTIMIZATION ALGORITHM
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Disclaimer:
+This code was not produced to be distributed, but for research purposes. Therefore, it is not clean and easily applicable. It is provided to fulfil the requirement for publication on JGR: Earth Surface. 
+The authors decline any responsibility for consequences associated with running and/or conclusions drawn by the users or his/her associates, based on its results.
+Should the users need help, please contact Alessandro Cattapan: a.cattapan@un-ihe.org.
