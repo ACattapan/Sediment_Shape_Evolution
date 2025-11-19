@@ -1,0 +1,12 @@
+This document describes how to produce Figures 11 and S5 of the paper submitted to the Journal of Geophysical Research: Earth Surface.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In order to reproduce the figure 11 and S5 presented in the paper the model Arenites_Validation_Point_Sources_Confluences_Optimization.m should be run 
+This requires the preparation of a spreadsheet describing the spatial configuration of sources and confluences along the main river, according to the Lagrangian coordinate system describe in the paper. The origin is the most downstream sampling point or closure of the model domain, and the spatial coordinate defines the distance of each source and confluence along the direction of steepest descent.
+This file also performs the optimization of the parameter lambda and plots figure S5, representing the minimization condition for the error.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Disclaimer:
+This code was not produced to be distributed, but for research purposes. Therefore, it is not clean and easily applicable. It is provided to fulfil the requirement for publication on JGR: Earth Surface. 
+The authors decline any responsibility for consequences associated with running and/or conclusions drawn by the users or his/her associates, based on its results.
+Should the users need help, please contact Alessandro Cattapan: a.cattapan@un-ihe.org.
